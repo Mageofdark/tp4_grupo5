@@ -10,6 +10,7 @@ public class Libro implements Comparable<Libro> {
     public Libro() {}
 
     public int compareTo(Libro otro){
+
         return this.titulo.compareTo(otro.titulo);
     }
 

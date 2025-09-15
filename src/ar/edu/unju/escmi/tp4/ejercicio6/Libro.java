@@ -10,7 +10,7 @@ public class Libro implements Comparable<Libro> {
     public Libro() {}
 
     public int compareTo(Libro otro){
-        return this.isbn.compareTo(otro.isbn);
+        return this.titulo.compareTo(otro.titulo);
     }
 
     public void mostrarDatos() {

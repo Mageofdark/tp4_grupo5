@@ -29,6 +29,7 @@ public class Ejercicio3 {
 
                     System.out.print("Ingrese DNI del paciente: ");
                     p.setDni(sc.nextInt());
+                    sc.nextLine();
 
                     System.out.print("Ingrese Nombre del paciente: ");
                     p.setNombre(sc.nextLine());
@@ -38,7 +39,7 @@ public class Ejercicio3 {
 
                     System.out.print("Ingrese Número de Historia Clínica: ");
                     p.setNumHC(sc.nextInt());
-                  //sc.nextLine();
+                    sc.nextLine();
 
                     System.out.print("Ingrese Obra Social del paciente: ");
                     p.setObraSocial(sc.nextLine());

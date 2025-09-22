@@ -113,7 +113,6 @@ public class Ejercicio1 {
                     default:
                         System.out.println("Opcion invalida. Por favor, intente nuevamente.");
                 }
-
             } while(opcion != 7);
             scanner.close();
         }

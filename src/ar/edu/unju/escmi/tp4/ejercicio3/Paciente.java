@@ -49,10 +49,13 @@ public class Paciente implements Comparable<Paciente> {
         this.obraSocial = obraSocial;
     }
 
+    @Override
     public int compareTo(Paciente otroPaciente) {
         return Integer.compare(this.numHC, otroPaciente.getNumHC());
+        
     }
 
+    @Override
     public String toString(){
         return "Paciente{" +
                 "dni=" + dni +

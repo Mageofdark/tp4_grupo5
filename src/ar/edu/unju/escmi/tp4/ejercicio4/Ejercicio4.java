@@ -35,33 +35,34 @@ public class Ejercicio4 {
                     System.out.print("Ingrese el nombre: ");
                     String nombre = sc.nextLine();
 
-                    String tipo_cliente;
+                    String tipoCliente;
                     System.out.println("Elegir el tipo de cliente: ");
                     System.out.println("Ingrese 1 o F para seleccionar cliente frecuente");
                     System.out.println("Ingrese 2 u O para seleccionar cliente ocasional");
                     System.out.println("Ingrese 3 u otro boton para asignar uno personalizado");
                     switch (sc.nextLine()) {
                         case "1","F","f" :
-                            tipo_cliente = "frecuente";
+                            tipoCliente = "frecuente";
                             break;
                     
                         case "2","O","o" :
-                            tipo_cliente = "ocasional";
+                            tipoCliente = "ocasional";
                             break;
 
                         default:
                             System.out.print("- ");
-                            tipo_cliente = sc.nextLine();
+                            tipoCliente = sc.nextLine();
                             break;
                     }
-                    System.out.println("Tipo de cliente: "+ tipo_cliente);
+                    System.out.println("Tipo de cliente: "+ tipoCliente);
 
-                    Cliente cliente = new Cliente(dni,nombre,tipo_cliente);
+                    Cliente cliente = new Cliente(dni,nombre,tipoCliente);
 
                     if(clientes.add(cliente)){
                         System.out.println("La persona con el dni "+ cliente.getDni()+ " fue agregado correctamente");
                     }
                     break;
+
             
                 case '2':
                     if(clientes.isEmpty()){
@@ -97,13 +98,13 @@ public class Ejercicio4 {
                     break;
                         
                 case '4':
-                        clientes.stream().filter(e -> e.getTipo_cliente().equals("ocasional")).forEach(e -> e.mostrarDatos());
-                        System.out.println("Cantidad: "+ clientes.stream().filter(e -> e.getTipo_cliente().equals("ocasional")).count());
+                        clientes.stream().filter(e -> e.getTipoCliente().equals("ocasional")).forEach(e -> e.mostrarDatos());
+                        System.out.println("Cantidad: "+ clientes.stream().filter(e -> e.getTipoCliente().equals("ocasional")).count());
                     break;
                 
                 case '5':
-                    clientes.stream().filter(e -> e.getTipo_cliente().equals("frecuente")).forEach(e -> e.mostrarDatos());
-                    System.out.println("Cantidad: "+ clientes.stream().filter(e -> e.getTipo_cliente().equals("frecuente")).count());
+                    clientes.stream().filter(e -> e.getTipoCliente().equals("frecuente")).forEach(e -> e.mostrarDatos());
+                    System.out.println("Cantidad: "+ clientes.stream().filter(e -> e.getTipoCliente().equals("frecuente")).count());
                     break;
 
                 case '6':
